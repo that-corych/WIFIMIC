@@ -48,9 +48,7 @@
         <tb:TaskbarIcon
             x:Name="tba"
             Visibility="Collapsed"
-            IconSource="Icons/microphone.ico"
-            MenuActivation="LeftOrRightClick"
-            PopupActivation="DoubleClick">
+            IconSource="Icons/microphone.ico">
         </tb:TaskbarIcon>
     </Grid>
 </Window>
