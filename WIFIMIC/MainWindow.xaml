@@ -1,0 +1,56 @@
+﻿<Window x:Class="WIFIMIC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:WIFIMIC"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
+        mc:Ignorable="d"
+        Height="450" 
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="650"/>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="55*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="425*"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Column="3"
+                Style="{StaticResource MaterialDesignFloatingActionButton}"
+                Width="35"
+                Height="35"
+                Click="ButtonClose_Click" Cursor="Hand"
+                Margin="0 0 5 0">
+            <materialDesign:PackIcon Kind="WindowClose"
+                                     Foreground="White"/>
+        </Button>
+
+        <Button Grid.Column="2"
+                Style="{StaticResource MaterialDesignFloatingActionButton}"
+                Background="Red"
+                BorderBrush="Red"
+                Width="35"
+                Height="35"
+                Click="ButtonHide_Click" Cursor="Hand">
+            <materialDesign:PackIcon Kind="WindowMinimize"
+                                     Foreground="White"/>
+        </Button>
+        <tb:TaskbarIcon
+            x:Name="tba"
+            Visibility="Collapsed"
+            IconSource="Icons/microphone.ico"
+            MenuActivation="LeftOrRightClick"
+            PopupActivation="DoubleClick">
+        </tb:TaskbarIcon>
+    </Grid>
+</Window>
